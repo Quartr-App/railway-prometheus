@@ -1,6 +1,12 @@
-- job_name: "public-api"
-  dns_sd_configs:
-    - names:
-        - "public-api.railway.internal"
-      type: "AAAA"
-      port: 8080
+global:
+  scrape_interval: 5s
+  external_labels:
+    monitor: 'railway-prom'
+
+scrape_configs:
+  - job_name: "public-api"
+    dns_sd_configs:
+      - names:
+          - "public-api.railway.internal"
+        type: "AAAA"
+        port: 8080
