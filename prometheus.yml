@@ -10,6 +10,6 @@ scrape_configs:
   # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
   - job_name: "public-api"
     static_configs:
-      - targets: ["public-api.railway.internal:9090"]
+      - targets: ["public-api.railway.internal"]
         labels:
           app: "public-api"
