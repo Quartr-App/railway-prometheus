@@ -9,7 +9,8 @@ global:
 scrape_configs:
   # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
   - job_name: "public-api"
+    scheme: https
     static_configs:
-      - targets: ["railway-prometheus"]
+      - targets: ["public-api.railway.internal"]
         labels:
           app: "public-api"
