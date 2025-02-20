@@ -12,4 +12,4 @@ scrape_configs:
   - job_name: 'api'
     scrape_interval: 5s
     static_configs:
-      - targets: ['https://public-api.railway.internal/metrics']
+      - targets: ['public-api.railway.internal/metrics']
