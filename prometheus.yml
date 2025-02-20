@@ -5,8 +5,8 @@ global:
 
 scrape_configs:
   - job_name: "public-api"
-    dns_sd_configs:
-      - names:
-          - "public-api.railway.internal"
-        type: "AAAA"
-        port: 8080
+    scrape_interval: 5s
+    scrape_timeout: 3s
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["public-api.railway.internal:8080"]
